@@ -12,6 +12,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/fondoboton"
+        android:onClick="jugar"
         android:text="@string/btn_texto"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
