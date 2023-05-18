@@ -7,30 +7,33 @@
     android:background="@drawable/wallpaperprincipal"
     tools:context=".MainActivity2_Nivel1">
 
-    <TextView
-        android:id="@+id/txt_Score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/app_name"
-        android:text="@string/totalScore"
+    <ImageView
+        android:id="@+id/imageView_NumeroDos"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintHorizontal_bias="0.945"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154" />
+        app:layout_constraintVertical_bias="0.422"
+        app:srcCompat="@drawable/cero"
+        tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/txt_Manzanas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/etVidas"
+    <Button
+        android:id="@+id/btn_Comprobar"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:background="@drawable/fondoboton"
+        android:onClick="comparar"
+        android:text="@string/botonSumar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.209" />
+        app:layout_constraintVertical_bias="0.592"
+        tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/txt_Nombre"
@@ -42,21 +45,32 @@
         app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094" />
+        app:layout_constraintVertical_bias="0.182" />
 
-    <ImageView
-        android:id="@+id/imageView_Manzanas"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:contentDescription="@string/app_name"
+    <TextView
+        android:id="@+id/txt_Manzanas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/etVidas"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202"
-        app:srcCompat="@drawable/tresvidas"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintVertical_bias="0.297" />
+
+    <TextView
+        android:id="@+id/txt_Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:text="@string/totalScore"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.242" />
 
     <ImageView
         android:id="@+id/imageView_Signo"
@@ -67,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319"
+        app:layout_constraintVertical_bias="0.422"
         app:srcCompat="@drawable/adicion"
         tools:ignore="ContentDescription" />
 
@@ -80,21 +94,22 @@
         app:layout_constraintHorizontal_bias="0.054"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319"
+        app:layout_constraintVertical_bias="0.422"
         app:srcCompat="@drawable/cero"
         tools:ignore="ContentDescription" />
 
     <ImageView
-        android:id="@+id/imageView_NumeroDos"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:id="@+id/imageView_Manzanas"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.945"
+        app:layout_constraintHorizontal_bias="0.293"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319"
-        app:srcCompat="@drawable/cero"
+        app:layout_constraintVertical_bias="0.291"
+        app:srcCompat="@drawable/tresvidas"
         tools:ignore="ContentDescription" />
 
     <EditText
@@ -107,21 +122,22 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
         tools:ignore="Autofill" />
 
-    <Button
-        android:id="@+id/btn_Comprobar"
-        android:layout_width="100dp"
-        android:layout_height="48dp"
-        android:background="@drawable/fondoboton"
-        android:text="@string/botonSumar"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Nivl1"
+        android:layout_width="426dp"
+        android:layout_height="56dp"
+        android:background="@color/colorprimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="TextSizeCheck" />
+        app:titleTextColor="@color/icons" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
