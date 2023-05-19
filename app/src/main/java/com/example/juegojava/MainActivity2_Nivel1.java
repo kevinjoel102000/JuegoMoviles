@@ -72,7 +72,7 @@ public class MainActivity2_Nivel1 extends AppCompatActivity {
                 vidas -- ;
                 switch (vidas){
                     case 3:
-                        iv_Vidas.setImageResource(R.drawable.dosvidas);
+                        iv_Vidas.setImageResource(R.drawable.tresvidas);
                         Toast.makeText(this,"Tienes 3 Manzanas", Toast.LENGTH_SHORT).show();
                         break;
 

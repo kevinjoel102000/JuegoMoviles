@@ -15,7 +15,7 @@ import android.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity2_Nivel2 extends AppCompatActivity {
+public class MainActivity2_Nivel3 extends AppCompatActivity {
     Toolbar myToolBar;
     TextView txt_Nombre, txt_Score;
     ImageView iv_AUno, iv_ADos, iv_Vidas;
@@ -32,9 +32,9 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity2_nivel2);
+        setContentView(R.layout.activity_main_activity2_nivel3);
 
-        Toast.makeText(this, "Nivel 2: Sumas Intermedio", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Nivel 3: Restas", Toast.LENGTH_LONG).show();
         txt_Nombre = findViewById(R.id.txt_Nombre);
         txt_Score = findViewById(R.id.txt_Score);
         iv_AUno = findViewById(R.id.imageView_NumeroUno);
@@ -126,25 +126,28 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
     }
 
     private void numAleatorio() {
-        if(score <= 19){
+        if(score <= 29){
             numAleatorio_1 = (int) (Math.random() *10);
             numAleatorio_2 = (int) (Math.random() *10);
 
-            resultado  = numAleatorio_1 + numAleatorio_2;
-
-            // Eliminar el FOR como prueba de mejora
-            for (int i = 0; i < numero.length; i++) {
-                int id = getResources().getIdentifier(numero[i], "drawable", getPackageName());
-                if (numAleatorio_1 == i) {
-                    iv_AUno.setImageResource(id);
+            resultado  = numAleatorio_1 - numAleatorio_2;
+            if(resultado >= 0){
+                // Eliminar el FOR como prueba de mejora
+                for (int i = 0; i < numero.length; i++) {
+                    int id = getResources().getIdentifier(numero[i], "drawable", getPackageName());
+                    if (numAleatorio_1 == i) {
+                        iv_AUno.setImageResource(id);
+                    }
+                    if (numAleatorio_2 == i) {
+                        iv_ADos.setImageResource(id);
+                    }
                 }
-                if (numAleatorio_2 == i) {
-                    iv_ADos.setImageResource(id);
-                }
+            }else{
+                numAleatorio();
             }
 
         }else {
-            Intent intent = new Intent(this,MainActivity2_Nivel3.class);
+            Intent intent = new Intent(this,MainActivity2_Nivel4.class);
 
             string_Score = String.valueOf(score);
             string_Vidas = String.valueOf(vidas);
@@ -191,5 +194,4 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
         }
         BD.close();
     }
-
 }
