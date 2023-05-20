@@ -42,14 +42,14 @@ public class MainActivity2_Nivel3 extends AppCompatActivity {
         iv_Vidas = findViewById(R.id.imageView_Manzanas);
         et_Respuesta = findViewById(R.id.et_Resultado);
 
-        nomJugador = getIntent().getStringExtra("jugador");
+        nomJugador = getIntent().getStringExtra("Jugador");
         txt_Nombre.setText("Jugador: " + nomJugador);
 
-        string_Score = getIntent().getStringExtra("score");
+        string_Score = getIntent().getStringExtra("Score");
         score = Integer.parseInt(string_Score);
         txt_Score.setText("Score: " + score);
 
-        string_Vidas = getIntent().getStringExtra("vidas");
+        string_Vidas = getIntent().getStringExtra("Vidas");
         vidas = Integer.parseInt(string_Vidas);
         switch (vidas){
             case 3:
@@ -152,9 +152,9 @@ public class MainActivity2_Nivel3 extends AppCompatActivity {
             string_Score = String.valueOf(score);
             string_Vidas = String.valueOf(vidas);
 
-            intent.putExtra("Jugador: ", nomJugador);
-            intent.putExtra("Score: ", string_Score);
-            intent.putExtra("Vidas: ", string_Vidas);
+            intent.putExtra("Jugador", nomJugador);
+            intent.putExtra("Score", string_Score);
+            intent.putExtra("Vidas", string_Vidas);
 
             mp.stop();
             mp.release();

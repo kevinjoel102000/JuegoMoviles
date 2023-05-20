@@ -43,6 +43,9 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
         iv_Vidas = findViewById(R.id.imageView_Manzanas);
         et_Respuesta = findViewById(R.id.et_Resultado);
 
+        nomJugador = getIntent().getStringExtra("Jugador");
+        txt_Nombre.setText("Jugador: " + nomJugador);
+
         string_Score = getIntent().getStringExtra("Score");
         Log.d("Score", "Value from Intent: " + string_Score); // Add this line
         score = Integer.parseInt(string_Score);
@@ -153,9 +156,9 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
             string_Score = String.valueOf(score);
             string_Vidas = String.valueOf(vidas);
 
-            intent.putExtra("Jugador: ", nomJugador);
-            intent.putExtra("Score: ", string_Score);
-            intent.putExtra("Vidas: ", string_Vidas);
+            intent.putExtra("Jugador", nomJugador);
+            intent.putExtra("Score", string_Score);
+            intent.putExtra("Vidas", string_Vidas);
 
             mp.stop();
             mp.release();
