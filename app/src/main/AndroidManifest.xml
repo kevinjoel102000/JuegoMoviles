@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity2_Nivel2"
             android:parentActivityName=".MainActivity2_Nivel1">
