@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -42,14 +43,17 @@ public class MainActivity2_Nivel2 extends AppCompatActivity {
         iv_Vidas = findViewById(R.id.imageView_Manzanas);
         et_Respuesta = findViewById(R.id.et_Resultado);
 
-        nomJugador = getIntent().getStringExtra("jugador");
-        txt_Nombre.setText("Jugador: " + nomJugador);
-
-        string_Score = getIntent().getStringExtra("score");
+        string_Score = getIntent().getStringExtra("Score");
+        Log.d("Score", "Value from Intent: " + string_Score); // Add this line
         score = Integer.parseInt(string_Score);
         txt_Score.setText("Score: " + score);
 
-        string_Vidas = getIntent().getStringExtra("vidas");
+        string_Vidas = getIntent().getStringExtra("Vidas");
+        Log.d("Vidas", "Value from Intent: " + string_Vidas); // Add this line
+        vidas = Integer.parseInt(string_Vidas);
+
+
+        string_Vidas = getIntent().getStringExtra("Vidas");
         vidas = Integer.parseInt(string_Vidas);
         switch (vidas){
             case 3:

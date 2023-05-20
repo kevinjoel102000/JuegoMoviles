@@ -132,14 +132,18 @@ public class MainActivity2_Nivel1 extends AppCompatActivity {
             string_Score = String.valueOf(score);
             string_Vidas = String.valueOf(vidas);
 
-            intent.putExtra("Jugador: ", nomJugador);
-            intent.putExtra("Score: ", string_Score);
-            intent.putExtra("Vidas: ", string_Vidas);
+            intent.putExtra("Jugador", nomJugador);
+            intent.putExtra("Score", string_Score);
+            intent.putExtra("Vidas", string_Vidas);
 
             mp.stop();
             mp.release();
-            startActivity(intent);
-            finish();
+            try {
+                startActivity(intent);
+                finish();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
